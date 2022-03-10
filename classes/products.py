@@ -7,11 +7,12 @@ class Product:
         self.name = name
         self.price = price
         self.category = category
-        
 
     def update_price(self, percent_change, is_increased):
         if is_increased == True:
-            self.price += percent_change 
+            self.price += percent_change
+        else:
             self.price -= percent_change
-        return self.price
-    print("hey")
+    
+    def print_info(self):
+        print(f"{self.name} , {self.category}, {self.price}")
